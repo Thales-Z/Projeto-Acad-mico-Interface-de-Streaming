@@ -1,0 +1,305 @@
+*   {
+    margin: 0;
+    padding: 0;
+}
+
+body    {
+    background-color: black;
+    font-family: 'roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    padding-top: 5%;    
+
+}
+nav {
+    background-color: #000000; 
+    height: 12vh; 
+    width: 100%;
+    display: flex; 
+    align-items: center; 
+    position:fixed; 
+    justify-content: space-around;
+    top: 0;
+    z-index: 100;
+    
+}
+
+a   {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+a:hover {
+    opacity: 0.7;
+}
+
+.logo   {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align:justify;
+    margin-right: 400px;
+
+
+}
+.lista-navegacao  {
+    list-style: none;
+    display: flex;
+
+    
+
+}
+.lista-navegacao  li  {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    text-align: right;
+    float: left;
+
+
+}
+
+
+
+
+
+
+.slideshow-container {
+    width: 80%;
+    max-width: 90vw;
+    height: 600px;
+    position:relative; 
+    overflow: hidden; 
+    border-radius: 80px;
+    margin-left: 10%;
+    margin-top: 1%;
+    
+   
+}
+
+
+.slideshow-container img {
+    -webkit-mask-image: linear-gradient(to top, transparent 5%, black 80%);
+    mask-image: linear-gradient(to top, transparent 5%, black 80%);
+    -webkit-mask-size: 0%; 
+    mask-size: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; 
+    transition: opacity 2s ease-in-out;
+}
+
+#slide-ruptura {
+    object-position: center 5%;
+    
+}
+
+/* * Classe que o JavaScript adicionará para tornar a imagem ativa (visível).
+*/
+.slideshow-container img.slide-active{
+    opacity: 1; 
+}
+
+
+.slide-btn {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    user-select: none; 
+    transition: background-color 0.3s;
+}
+
+.slide-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+#prev-btn {
+    left: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+#next-btn {
+    right: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.titulo{
+    text-transform: uppercase;
+    text-align: left;
+    position:absolute;
+    margin-right: 0%;
+    font-size: 100px;
+    text-shadow: 10px 4px 20px black;
+    overflow: visible;
+    z-index: 2;
+    top: 65%;
+    left:3%;
+    margin-top: 1%;
+    
+    
+}
+
+.destaque{
+    
+    align-items: center;
+    text-transform: uppercase;
+    width:max-content;
+    z-index: 2;
+    left: 3.5%;
+    top:85%;
+    position: absolute;
+    margin-top: 1%;
+}
+
+.container-filtros {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px 20px 20px;
+    flex-wrap: wrap;
+}
+
+.grupo-filtro {
+    display: flex;
+    gap: 10px;
+    border: 1px solid #333;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: #1a1a1a;
+}
+
+.filtro-btn {
+    background-color: transparent;
+    color: #a0a0a0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+
+.filtro-btn.active,
+.filtro-btn:hover {
+    background-color: #e50914; 
+    color: white;
+}
+.galeria-grid {
+    width: 300px;
+    height: 450px;
+    border-radius: 15px;
+    display: flex;
+    margin-left: 20px;
+    object-fit:cover
+ 
+
+}
+/* Galeria principal*/
+.galeria-principal {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 25px;
+    padding: 20px 40px;
+}
+
+.item-galeria {
+    width: 100%;
+    height: 420px; 
+    border-radius: 15px;
+    overflow: hidden; 
+    
+    display: block; 
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+#slide-titulo, #slide-subtitulo {
+    transition: opacity 0.7s ease-in-out;
+}
+
+/* Efeito de zoom ao passar o mouse */
+.item-galeria:hover {
+    transform: scale(1.05); 
+}
+
+/* Classe para esconder itens filtrados */
+.item-galeria.hide {
+    display: none; 
+}
+.titulo-galeria {
+    font-size: 30px;
+    padding: 20px;
+    margin-left: 9vh;
+}
+
+.exibicao {
+    position: relative; 
+    height: 90vh; 
+    display: flex;
+    align-items: center; 
+    padding: 0 40px;
+    color: white;
+}
+
+.hero-banner {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    -webkit-mask-image: linear-gradient(to top, transparent 5%, black 40%);
+    mask-image: linear-gradient(to top, transparent 5%, black 40%);
+}
+.sinopse{
+    text-transform: uppercase;
+    text-align: justify;
+    z-index: 2;
+    left: 3%;
+    top:70%;
+    position: absolute;
+    width: 400px;
+    text-shadow: 10px 4px 20px black;
+    overflow: visible;
+}
+.tabela{
+    border: white;
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+.video {
+    width: 80%;
+    height: 500px;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+footer{
+    text-align: center;
+    padding: 30px
+}
