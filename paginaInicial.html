@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Thales Z</title>
+    <link rel="stylesheet" href="site.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav> 
+            <h1 class="logo"> <a href="paginaInicial.html"> ZFilmes</a></h1>
+            <ul class="lista-navegacao">
+                <li><a href="paginaInicial.html"> Originais</a></li>
+                <li><a href="paginaInicial.html"> Series</a></li>
+                <li><a href="paginaInicial.html"> Filmes</a></li>
+            </ul>
+
+            <form  class="grupo-filtro">
+                <input style="color: white;" class="grupo-filtro" type="text" id="nome" name="nome">
+                <button class="filtro-btn" type="submit">Pesquisar</button>
+            </form>
+            
+    </nav>
+    </header>
+
+     
+
+    <figure class="slideshow-container">
+        <a href="pagina2.html"><img src="img/vikings.jpg" alt="Capa de filme aleatória 1" data-titulo="Vikings" data-subtitulo="Nova temporada" class="slide-active"></a>
+        <a href="pagina2.html"><img id="slide-ruptura" src="img/ruptura.jpg" alt="Pôster da série Ruptura" data-titulo="Ruptura" data-subtitulo="Sua mente é o local do crime"></a>
+        <a href="pagina2.html"><img src="img/the-last-of-us.jpg" alt="Capa de filme aleatória 3" data-titulo="The Last of Us" data-subtitulo="A sobrevivência é apenas o começo."></a>
+        <a href="pagina2.html"><img src="img/silo.jpg" alt="Capa de filme aleatória 4" data-titulo="Silo" data-subtitulo="Se as mentiras não te matarem, a verdade o fará."></a>
+        <a href="pagina2.html"><img src="img/arcane.jpg" alt="Capa de filme aleatória 5" data-titulo="Arcane" data-subtitulo="Toda lenda tem um começo."></a>
+        <a href="pagina2.html"><img src="img/batman.jpg" alt="Capa de filme aleatória 6" data-titulo="The Batman" data-subtitulo="Desmascare a verdade."></a>
+
+        
+
+        <button id="prev-btn" class="slide-btn">&#10094;</button>
+        <button id="next-btn" class="slide-btn">&#10095;</button>
+    </figure>
+    <h1 id="slide-titulo" class="titulo">Vikings</h1>
+    <p id="slide-subtitulo" class="destaque">nova temporada</p>
+
+    <section class="container-filtros">
+        <div class="grupo-filtro">
+            <button class="filtro-btn active" data-filtro="todos">Todos</button>
+            <button class="filtro-btn" data-filtro="filme">Filmes</button>
+            <button class="filtro-btn" data-filtro="serie">Séries</button>
+        </div>
+        <div class="grupo-filtro">
+            <button class="filtro-btn" data-filtro="dorama">Doramas</button>
+            <button class="filtro-btn" data-filtro="animacao">Animação</button>
+        </div>
+    </section>
+
+    <main class="galeria-principal">
+        <!--filmes-->
+        <a href="pagina2.html" class="item-galeria" data-tipo="filme" data-genero="filme">
+            <img src="filmes galeria/filme-1.webp">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="filme" data-genero="filme">
+            <img src="filmes galeria/filme-2.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="filme" data-genero="filme">
+            <img src="filmes galeria/filme-3.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="filme" data-genero="filme">
+            <img src="filmes galeria/filme-4.webp">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="filme" data-genero="filme">
+            <img src="filmes galeria/filme-5.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="filme" data-genero="filme">
+            <img src="filmes galeria/filme-6.jpg">
+        </a>
+        <!--series-->
+        <a href="pagina2.html" class="item-galeria" data-tipo="serie" data-genero="serie">
+            <img src="series galeria/serie-1.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="serie" data-genero="serie">
+            <img src="series galeria/serie-2.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="serie" data-genero="serie">
+            <img src="series galeria/serie-3.jpeg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="serie" data-genero="serie">
+            <img src="series galeria/serie-4.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="serie" data-genero="serie">
+            <img src="series galeria/serie-5.webp">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="serie" data-genero="serie">
+            <img src="series galeria/serie-6.webp">
+        </a>
+        <!--doramas-->
+        <a href="pagina2.html" class="item-galeria" data-tipo="dorama" data-genero="dorama">
+            <img src="dorama galeria/dorama-1.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="dorama" data-genero="dorama">
+            <img src="dorama galeria/dorama-2.webp">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="dorama" data-genero="dorama">
+            <img src="dorama galeria/dorama-3.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="dorama" data-genero="dorama">
+            <img src="dorama galeria/dorama-4.webp">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="dorama" data-genero="dorama">
+            <img src="dorama galeria/dorama-5.webp">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="dorama" data-genero="dorama">
+            <img src="dorama galeria/dorama-6.jpg">
+        </a>
+        <!-- filmes de animação-->
+        <a href="pagina2.html" class="item-galeria" data-tipo="animacao" data-genero="animacao">
+            <img src="animacao/anime-0.png">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="animacao" data-genero="animacao">
+            <img src="animacao/anime-2.webp">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="animacao" data-genero="animacao">
+            <img src="animacao/anime-3.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="animacao" data-genero="animacao">
+            <img src="animacao/anime-4.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="animacao" data-genero="animacao">
+            <img src="animacao/anime-5.jpg">
+        </a>
+        <a href="pagina2.html" class="item-galeria" data-tipo="animacao" data-genero="animacao">
+            <img src="animacao/anime-1.jpg">
+        </a>
+        </main>
+
+     <footer style="background-color: #000000; padding: 10px; margin-top: 20px;">
+        Thales Santos - Faeterj-Rio
+    </footer>
+</body>
+</html>
